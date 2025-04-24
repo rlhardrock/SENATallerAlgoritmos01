@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmo 06</title>
+</head>
+<body>
+
+<h1>Nota Final Estudiante</h1>
+<button onclick="notaFinalEstudiante()">Ingresar Notas</button>
+
+<script>
+    function notaFinalEstudiante() {
+        let calificacion1 = parseFloat(prompt("Ingrese la calificación del examen 1 (30%):"));
+        let calificacion2 = parseFloat(prompt("Ingrese la calificación del examen 2 (30%):"));
+        let calificacionF = parseFloat(prompt("Ingrese la calificación del examen final (40%):"));
+
+        const promedio =((calificacion1 * 0.30) + (calificacion2 * 0.30) + (calificacionF * 0.40));
+        alert(`Nota final: ${promedio.toFixed(3)}`);
+
+        if (promedio >= 3.15) {
+            notaFinal = Math.ceil(promedio * 10) / 10;
+            alert(`Asignatura Aprobada, promedio ${notaFinal}`);
+        } else {
+            notaFinal = Math.floor(promedio * 10) / 10;
+            alert(`Asignatura Reprobada, promedio ${notaFinal}`);
+        }
+    }
+</script>
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmo 11</title>
+</head>
+<body>
+
+<h1>Equipo a cual sera Asigando</h1>
+<button onclick="asignarEquipo()">Ingresar información</button>
+
+<script>
+    function asignarEquipo() {
+        let nombre = prompt("Ingresar Nombre jugador");
+        let cedula = prompt("Ingresar CC jugador");
+        let edad = parseFloat(prompt("Ingresar Edad del jugador"));
+        let equipo = "";
+
+        if (edad >= 25 && edad <= 40) {
+            equipo = "Profesionales";
+        } else if (edad >= 18 && edad <= 24) {
+            equipo = "Aficionados";
+        } else if (edad >= 12 && edad <= 17) {
+            equipo = "Novatos";
+        } else {
+            equipo = "No asignado a ningún equipo";
+        }
+
+        alert(`El jugador ${nombre} identificado con CC ${cedula} está en ${equipo}`);
+    }
+</script>
+
+
+
+</body>
+</html>
+
+

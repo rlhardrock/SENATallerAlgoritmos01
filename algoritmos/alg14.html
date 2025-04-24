@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmo 14</title>
+</head>
+<body>
+
+<h1>Nivel de un Empleado</h1>
+<button onclick="nivelEmpleado()">Ingresar Información</button>
+
+<script>
+    function nivelEmpleado() {
+        let sueldo = parseFloat(prompt("Ingresar valor del sueldo"));
+        const antiguedadEnEmpresa = parseFloat(prompt("Ingresar años laborales en la empresa"));
+        let nivel;
+
+        if (antiguedadEnEmpresa > 10) {
+            nivel = 3;
+        } else if (sueldo < 500 && antiguedadEnEmpresa < 4) {
+            nivel = 1;
+        } else if (sueldo >= 501 && sueldo <= 1000 && antiguedadEnEmpresa < 4) {
+            nivel = 2;
+        } else if (sueldo < 2000 && antiguedadEnEmpresa >= 5 && antiguedadEnEmpresa <= 9) {
+            nivel = 4;
+        } else {
+            nivel = 0;
+        }
+        alert("El nivel del empleado es: " + nivel);
+    }
+</script>
+
+
+
+</body>
+</html>
+
+

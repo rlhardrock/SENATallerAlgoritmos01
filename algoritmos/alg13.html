@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmo 13</title>
+</head>
+<body>
+
+<h1>Monitor de Universidad</h1>
+<button onclick="serMonitorUniversidad()">Ingresar Información</button>
+
+<script>
+    function serMonitorUniversidad() {
+        let promedio = parseFloat(prompt("Ingresar promedio universitario"))
+        let antecedentes = confirm("Tiene antecedentes?");
+        if (promedio > 4.0 && !antecedentes) {
+            alert("Apto para ser monitor de la institución.");
+        } else if (promedio <= 4.0) {
+            alert("No puedes ser monitor. Necesita un promedio superior a 4.0.");
+        } else if (antecedentes) {
+            alert("No puedes ser monitor debido a antecedentes disciplinarios.");
+        }
+    }
+</script>
+
+
+</body>
+</html>
+
+

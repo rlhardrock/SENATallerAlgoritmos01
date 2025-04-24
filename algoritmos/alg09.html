@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmo 09</title>
+</head>
+<body>
+
+<h1>Estado del Estudiante</h1>
+<button onclick="estadoEstudiante()">Ingresar calificación</button>
+
+<script>
+    function estadoEstudiante() {
+        let calificacion = parseFloat(prompt("Ingresar calificación del estudiante: "));
+        let estado = "";
+
+        if (calificacion === 5.0) {
+            estado = "EXCELENTE";
+        } else if (calificacion >= 4.0) {
+            estado = "BUENO";
+        } else if (calificacion >= 3.0) {
+            estado = "REGULAR";
+        } else {
+            estado = "DEFICIENTE";
+        }
+
+        alert(`La calificación es ${calificacion} y el estado del estudiante es: ${estado}`);
+    }
+</script>
+
+</body>
+</html>
+
+

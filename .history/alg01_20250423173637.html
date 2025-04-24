@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Algoritmo 01</title>
+</head>
+<body>
+
+  <h1>Verificación de saldo</h1>
+  <button onclick="saldoMegabus()">Ingresar saldo</button>
+
+
+  <script>
+    function saldoMegabus(saldo) {
+      const saldo = parseFloat(prompt("Ingrese el saldo de la tarjeta:"));
+
+      if (isNaN(saldo)) {
+        const valorPasaje = 1700;
+        const pasajesDisponibles = Math.floor(saldo / valorPasaje);
+        alert(`Pasajes disponibles: ${pasajesDisponibles}`);
+        if (pasajesDisponibles < 2) {
+          alert("Recargar tu tarjeta. Tienes menos de 2 pasajes.");
+        }
+      } else {
+        alert("Saldo no válido.");
+      }
+    }
+  </script>
+
+
+</body>
+</html>
+
+

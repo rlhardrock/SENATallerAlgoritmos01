@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmo 15</title>
+</head>
+<body>
+
+<h1>Mayuscula o Minuscula</h1>
+<button onclick="mayusculaMinuscula()">Ingresar letras</button>
+
+<script>
+    function mayusculaMinuscula() {
+        let letra = prompt("Ingrese una letra:");
+        if (!letra || letra.length !== 1) {
+            alert("Entrada inválida. Debe ser una sola letra.");
+        } else if (letra >= 'A' && letra <= 'Z') {
+            alert(`La letra '${letra}' es MAYÚSCULA.`);
+        } else if (letra >= 'a' && letra <= 'z') {
+            alert(`La letra '${letra}' es minúscula.`);
+        } else {
+            alert(`'${letra}' no es una letra.`);
+        }
+
+        let caracter = prompt("Ingrese un carácter para verificar si es un número:");
+        if (caracter >= '0' && caracter <= '9') {
+            alert(`'${caracter}' es un numéro.`);
+        } else {
+            alert(`'${caracter}' no es un numéro.`);
+        }
+    }
+</script>
+
+
+</body>
+</html>
+
+

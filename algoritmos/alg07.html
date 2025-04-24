@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmo 07</title>
+</head>
+<body>
+
+<h1>Pago Mensual Vendedor</h1>
+<button onclick="pagoVendedor()">Ingresar información</button>
+
+<script>
+    function pagoVendedor() {
+        let nombre = prompt("Nombre del vendedor: ");
+        let autosVendidos = parseFloat(prompt("Cantidad de automoviles vendidos: "));
+
+        const pagoBase = 350;
+        const comisionxAuto = 15;
+        const bonoExtra = autosVendidos > 15 ? 40 : 0;
+
+        var comisionTotal = autosVendidos * comisionxAuto
+        var sueldoBruto = pagoBase + comisionTotal + bonoExtra;
+        var impuesto = sueldoBruto * 0.25;
+        var sueldoNeto = sueldoBruto - impuesto;
+
+        alert(
+            "RESUMEN DE PAGO DEL VENDEDOR:\n" +
+            "Nombre:           " + nombre + "\n" +
+            "Autos vendidos:   " + autosVendidos + "\n" +
+            "Bono Extra:       " + bonoExtra + "\n" +
+            "Sueldo bruto:     $" + sueldoBruto.toFixed(2) + "\n" +
+            "Impuesto (25%):   $" + impuesto.toFixed(2) + "\n" +
+            "Sueldo neto:      $" + sueldoNeto.toFixed(2)
+        );
+
+    }
+</script>
+
+
+</body>
+</html>
+
+

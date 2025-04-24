@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Algoritmo 08</title>
+</head>
+<body>
+
+<h1>Maximo, minimo y promedio</h1>
+<button onclick="calculosNumericos()">Ingresar números</button>
+
+<script>
+    function calculosNumericos() {
+        let x = parseFloat(prompt("Ingrese el número X:"));
+        let y = parseFloat(prompt("Ingrese el número Y:"));
+        let z = parseFloat(prompt("Ingrese el número Z:"));
+        let max = Math.max(x, y, z);
+        let min = Math.min(x, y, z);
+        let promedio = ((x + y + z) / 3).toFixed(2);
+        alert(`Números ingresados: ${x}, ${y}, ${z}`);
+        alert(`Máximo: ${max}`);
+        alert(`Mínimo: ${min}`);
+        alert(`Promedio: ${promedio}`);
+    }
+</script>
+
+
+</body>
+</html>
+
+
