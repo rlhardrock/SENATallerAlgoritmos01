@@ -7,12 +7,20 @@
 <body>
 
 <h1>Monitor de Universidad</h1>
+<br>
+<br>
+<p>Para lograr ser monitor de la Universidad en las salas de sistemas,<br>
+    los estudiantes deben obtener un promedio integral superior a 4.0 <br>
+    y no tener antecedentes disciplinarios. <br>
+    Ayúdele a un estudiante a saber si puede optar por ser monitor de la institución.</p>
+<br>
+<br>
 <button onclick="serMonitorUniversidad()">Ingresar Información</button>
 
 <script>
     function serMonitorUniversidad() {
         let promedio = parseFloat(prompt("Ingresar promedio universitario"))
-        let antecedentes = confirm("Tiene antecedentes?");
+        let antecedentes = confirm("Tiene antecedentes? Aceptar SI o Cancelar NO");
         if (promedio > 4.0 && !antecedentes) {
             alert("Apto para ser monitor de la institución.");
         } else if (promedio <= 4.0) {

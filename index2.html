@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos - SENA PPS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f6f8;
+        }
+        h1 {
+            color: #333;
+        }
+        select, button {
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        #contenedor {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<h1>Selecciona un algoritmo</h1>
+
+<select id="selector">
+    <option value="">-- Seleccione un algoritmo --</option>
+    <option value="alg01">Algoritmo 1</option>
+    <option value="alg02">Algoritmo 2</option>
+    <option value="alg03">Algoritmo 3</option>
+    <option value="alg04">Algoritmo 4</option>
+    <option value="alg05">Algoritmo 5</option>
+    <option value="alg06">Algoritmo 6</option>
+    <option value="alg07">Algoritmo 7</option>
+    <option value="alg08">Algoritmo 8</option>
+    <option value="alg09">Algoritmo 9</option>
+    <option value="alg10">Algoritmo 10</option>
+    <option value="alg11">Algoritmo 11</option>
+    <option value="alg12">Algoritmo 12</option>
+    <option value="alg13">Algoritmo 13</option>
+    <option value="alg14">Algoritmo 14</option>
+    <option value="alg15">Algoritmo 15</option>
+</select>
+
+<button id="cargar">Cargar Algoritmo</button>
+
+<div id="contenedor">
+    <p>Selecciona un algoritmo para cargarlo aquí.</p>
+</div>
+
+<script>
+    const selector = document.getElementById('selector');
+    const boton = document.getElementById('cargar');
+    const contenedor = document.getElementById('contenedor');
+
+    // Mantener una referencia del script cargado para eliminarlo luego
+    let scriptActual = null;
+
+    boton.addEventListener('click', () => {
+        const algoritmoSeleccionado = selector.value;
+
+        if (!algoritmoSeleccionado) {
+            alert("Por favor seleccione un algoritmo.");
+            return;
+        }
+
+        // Si ya hay un script cargado, lo eliminamos antes de cargar uno nuevo
+        if (scriptActual) {
+            document.body.removeChild(scriptActual);
+            scriptActual = null;
+        }
+
+        // Limpiamos el contenedor
+        contenedor.innerHTML = "";
+
+        // Crear un nuevo elemento script
+        const script = document.createElement('script');
+        script.src = `js/${algoritmoSeleccionado}.js`;
+        script.onload = () => {
+            console.log(`✅ ${algoritmoSeleccionado}.js cargado exitosamente.`);
+        };
+        script.onerror = () => {
+            contenedor.innerHTML = "<p style='color: red;'>Error al cargar el algoritmo.</p>";
+        };
+
+        // Guardamos referencia al script cargado
+        scriptActual = script;
+
+        // Agregamos el script al body
+        document.body.appendChild(script);
+    });
+</script>
+
+</body>
+</html>
