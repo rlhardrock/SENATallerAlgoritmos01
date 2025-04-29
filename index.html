@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portada y Enlaces a Algoritmos</title>
+  <title>Taller Algoritmos N°2</title>
   <style>
     .contenedor {
       display: flex;
@@ -13,6 +13,29 @@
       padding: 20px;
       background-color: #e0e0e0;
       border: 1px solid #ccc;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Separación entre los botones */
+        padding: 10px;
+        background-color: #f5f5f5; /* Color de fondo claro */
+        border: 1px solid #ccc; /* Bordecito gris */
+        border-radius: 8px;
+    }
+    nav span {
+        background-color: #007bff; /* Azul bonito */
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        user-select: none; /* No se selecciona el texto al dar clic */
+        transition: background-color 0.3s;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+    nav span:hover {
+        background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
     }
     body {
       font-family: Arial, sans-serif;
@@ -33,12 +56,13 @@
       text-decoration: underline;
     }
   </style>
+    <script src="js/algoritmosTallerDos.js"></script>
 </head>
 <body>
     <div class="contenedor">
         <div class="caja">
-            <h1>TALLER DE ALGORITMOS</h1>
-            <h2>GA2-220501096-AA1-EV01</h2>
+            <h1>TALLER DE ALGORITMOS N°2</h1>
+            <h2>GA2-220501096-AA2-EV01</h2>
             <h2>APRENDIZ: LUIS REY</h2>
             <h2>INSTRUCTOR: ANDRES FELIPE PARRA MARTINEZ</h2>
             <h3>FICHA 3118273</h3>
@@ -50,25 +74,41 @@
         </div>
 
         <div class="caja">
-            <h2>Enlaces a archivos de algoritmos</h2>
-            <ul>
-                <li><a href="algoritmos/alg01.html" target="_blank">01 Saldo Megabus</a></li>
-                <li><a href="algoritmos/alg02.html" target="_blank">02 Verificación de Número</a></li>
-                <li><a href="algoritmos/alg03.html" target="_blank">03 Verificación de Número, Par e Impar</a></li>
-                <li><a href="algoritmos/alg04.html" target="_blank">04 Clase en Aerolinea</a></li>
-                <li><a href="algoritmos/alg05.html" target="_blank">05 Intercambio de Variables 2 var</a></li>
-                <li><a href="algoritmos/alg06.html" target="_blank">06 Nota Final Estudiante</a></li>
-                <li><a href="algoritmos/alg07.html" target="_blank">07 Pago Mensual Vendedor</a></li>
-                <li><a href="algoritmos/alg08.html" target="_blank">08 Maximo, minimo y promedio</a></li>
-                <li><a href="algoritmos/alg09.html" target="_blank">09 Estado del Estudiante</a></li>
-                <li><a href="algoritmos/alg10.html" target="_blank">10 Notas de N Estudiantes</a></li>
-                <li><a href="algoritmos/alg11.html" target="_blank">11 Equipo a Asignar</a></li>
-                <li><a href="algoritmos/alg12.html" target="_blank">12 Intercambio de Variables 3 var</a></li>
-                <li><a href="algoritmos/alg13.html" target="_blank">13 Monitor de Universidad</a></li>
-                <li><a href="algoritmos/alg14.html" target="_blank">14 Nivel del Empleado</a></li>
-                <li><a href="algoritmos/alg15.html" target="_blank">15 Mayuscula o Minuscula</a></li>
-            </ul>
+            <nav>
+                <span onclick="uno()" style="cursor: pointer">Ejercicio 1</span>
+                <span onclick="dos()" style="cursor: pointer">Ejercicio 2</span>
+                <span onclick="tres()" style="cursor: pointer">Ejercicio 3</span>
+                <span onclick="kuatro()" style="cursor: pointer">Ejercicio 4</span>
+                <span onclick="sinko()" style="cursor: pointer">Ejercicio 5</span>
+                <span onclick="seis()" style="cursor: pointer">Ejercicio 6</span>
+                <span onclick="siete()" style="cursor: pointer">Ejercicio 7</span>
+                <span onclick="ocho()" style="cursor: pointer">Ejercicio 8</span>
+                <span onclick="nueve()" style="cursor: pointer">Ejercicio 9</span>
+                <span onclick="diez()" style="cursor: pointer">Ejercicio 10</span>
+                <span onclick="diezyuno()" style="cursor: pointer">Ejercicio 11</span>
+                <span onclick="diezydos()" style="cursor: pointer">Ejercicio 12</span>
+                <span onclick="diezytres" style="cursor: pointer">Ejercicio 13</span>
+                <span onclick="diezykuatro" style="cursor: pointer">Ejercicio 14</span>
+                <span onclick="diezysinko" style="cursor: pointer">Ejercicio 15</span>
+                <span onclick="diezyseis" style="cursor: pointer">Ejercicio 16</span>
+                <span onclick="diezysiete" style="cursor: pointer">Ejercicio 17</span>
+                <span onclick="diezyocho" style="cursor: pointer">Ejercicio 18</span>
+                <span onclick="diezynueve" style="cursor: pointer">Ejercicio 19</span>
+                <span onclick="veinte" style="cursor: pointer">Ejercicio 20</span>
+                <span onclick="veinteyuno" style="cursor: pointer">Ejercicio 21</span>
+                <span onclick="veinteydos" style="cursor: pointer">Ejercicio 22</span>
+                <span onclick="veinteytres" style="cursor: pointer">Ejercicio 23</span>
+            </nav>
+            <hr>
+            <div id="enunciado"></div>
+            <hr>
+            <div id="resultado"></div>
+
+
         </div>
     </div>
 </body>
+
+<script src="js/algoritmosTallerDos.js"></script>
+
 </html>
